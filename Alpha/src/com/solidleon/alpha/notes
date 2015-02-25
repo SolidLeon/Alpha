@@ -1,0 +1,111 @@
+NEXT PATCH:
+GUI: View GUI
+Each View can render per line, knows its bounds etc.
+Different Views for differen tasks.
+
+- Default View
+Offers complete flexibility.
+Title: A String that is rendered on top.
+width: widht of the accessible rect
+height: height of the accessible rect
+x: absolute x position of the view container
+y: absolute y position of the view container
+
+
+- List View
+View where each item that is added is represented as row,
+using a default rowrenderer (toString) or a custom one.
+ENTER is default keybinding for selecting an item,
+X is default keybinding for marking an item (only if MUTIPLE SELECT is allowed)
+ESCAPE to return to last view.
+
+callbacks:
+onSelection(SelectionEvent)
+    SelectionEvent
+    - source : View
+    - selectedItem : Object/ListItem
+
+
+
+Serveral Tilesets / Sprite Atlas'
+
+Each file located in the gfx/terrain/ direcory of any mod, gets
+loaded and is accessible by sprite("modname", index).
+
+each 16x16 tiles á 8x8 pixels.
+to access tiles from another tileset than the first one, simple use an
+sprite index above (16*16).
+A sprite can of course be bigger than 8x8, the appropiate sprite position
+just has to match.
+
+Items fo into files
+    items0.png
+    items1.png
+    ...
+
+NPCs
+
+
+Each NPC, can have its own set of sprite sheets, for animation, states etc.
+Example:
+NPC Zombie
+Spritesheet: data/gfx/zombie/zombie.png
+
+Sounds go into
+data/sounds/npc/zombie/select.ogg
+
+MODs
+
+A mod is just a folder placed into the "mod" directory.
+the name of the directory, is also the name for the mod. (so no special characters!)
+the directory must obey a certain structure to be loaded properly.
+
+data/
+    script/
+    gfx/
+    sounds/
+
+
+
+
+
+
+Example: Zombie mod
+
+structure:
+zombie/data/scripts/zombie/zombie.lua
+zombie/data/gfx/zombie/zombie.png
+zombie/data/sounds/zombie/select.ogg
+
+This directory must be copied to
+AlphaDirectory/mods/
+
+The mods are loaded on startup.
+(MAYBE???: scripts can be changed during the game.)
+
+
+Example: Default
+contents:
+
+default/
+    data/
+        tiles/
+            gras.lua
+            tree.lua
+        npcs/
+            cow.lua
+            pig.lua
+            
+        structures/
+            sawmill.lua
+            carpenter.lua
+        scripts/
+            init.lua
+                Specify tiles, npcs, buildings, crafting-recipes, items
+        gfx/
+            terrain0.png
+        sounds/
+            music/
+                skyrim.ogg
+                morrowind.ogg
+                oblivion.ogg

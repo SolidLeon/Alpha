@@ -1,0 +1,55 @@
+Game Manual
+
+After starting, you will find yourself in the <scroll mode>.
+GLOBAL
+    - [F1] toggle fullscreen
+    - [F2] save and exit
+    - [F3] start new game
+    - [F5] save
+    - [F9] load
+    - [F10] options
+    - [F11] help screen
+    
+SCROLL MODE
+    - [ARROW KEYS]  to move around the map, holding [SHIFT] to move faster.
+    - [d]esignation mode lets you use items from your inventory, build structures etc.
+    - [i] changes to inventory mode
+    
+INVENTORY MODE
+    - [UP][DOWN] to select another item.
+    - [ESCAPE] to return to scroll mode.
+
+DESIGNATION MODE
+    - [ARROW KEYS] to move around, shift to move faster. 
+      You can not move outside the seeable area.
+    - [TAB] to switch between selection and rectangle mode.
+        In selection mode, you select start and end position for your rectangle.
+        In rectangle mode, you can specify a fixed rectangle.
+            [h] decrement in horizontal direction (x-)
+            [j] increment in vertical direction (y+)
+            [k] decrement in vertical direction (y-)
+            [l] increment in horizontal direction (x+)
+    - [ENTER] to set a rectangle point in selcetion mode 
+        (the second point confirms and uses the selected item, etc)
+        or to directly use the selected item etc with the specified rectangle,
+        if in rectangle mode.
+    - [ESCAPE] to return to scroll mode
+    - [b]uild opens the build menu
+    - [s]elect to enable select mode, to for example select a sawmill
+    
+CRAFTING MOE
+    Bright items can be crafted, dark ones not.
+    Red marks the selected item.
+    - [UP/DOWN] to move the cursor
+    - [ENTER] to craft the selected item
+    - [a]ll to toggle to either craft one item per enter or at many as possible
+
+How to start:
+
+Hit [d]esignate and select a few trees until you have at least 100 wood.
+Now look for a place where you have 3x3 space.
+Hit [b]uild, select the sawmill and place it.
+Hit [s]elect, move the cursor above the just placed sawmill and hit [ENTER].
+Press [a]ll and select "Cut wood", hit [ENTER].
+
+Congratulations, you have completed the first tutorial!
